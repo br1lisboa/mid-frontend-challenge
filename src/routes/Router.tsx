@@ -1,16 +1,17 @@
 import React, { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 
-// Lazy-loaded pages
-const Home = React.lazy(() => import("../views/home/Home"));
-// const About = React.lazy(() => import("./pages/About"));
-// const NotFound = React.lazy(() => import("./pages/NotFound"));
+const Home = React.lazy(() => import("../views/home/HomeView"));
+const Property = React.lazy(() => import("../views/property/PropertyView"));
+const Create = React.lazy(() => import("../views/create/CreateView"));
 
 export function Router() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/property/:id" element={<Property />} />
+        <Route path="/create" element={<Create />} />
       </Routes>
     </Suspense>
   );

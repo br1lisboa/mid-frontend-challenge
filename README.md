@@ -1,3 +1,9 @@
+HERRAMIENTAS
+Axios
+ReactQuery
+ReactHookForm
+Zod
+
 Front-End Challenge - Mid-Level 🚀
 Descripción
 
@@ -25,16 +31,17 @@ Requisitos Técnicos
 Requisitos del Proyecto
 
     Pantalla de Listado de Propiedades:
-        Mostrar una lista de propiedades con:
-            Título.
-            Imagen.
-            Dirección.
-            Tipo de propiedad (Apartment, House, etc.).
-            Precio.
-            Estado (En venta, En alquiler).
+        <!-- Mostrar una lista de propiedades con:
+            Título./
+            Imagen./
+            Dirección./
+            Tipo de propiedad (Apartment, House, etc.)./
+            Precio./
+            Estado (En venta, En alquiler)./
             Disponibilidad (Activo, Inactivo).
             Area
-            Fecha de publicación
+            Fecha de publicación -->
+
         Funcionalidades:
             Búsqueda: Filtrar propiedades por titulo o dirección.
             Filtros: Por tipo de propiedad y estado. Si decides implementar filtros avanzados (combinados), será considerado como un punto a favor 😉
@@ -45,11 +52,11 @@ Requisitos del Proyecto
         Al hacer click en una propiedad, abrir una pantalla que muestre todos los datos de la propiedad.
         Incluir botón para regresar al listado.
 
-    Mapa Interactivo:
+    <!-- Mapa Interactivo:
         Incluir un mapa en la pantalla principal que:
             Localice las propiedades en un mapa interactivo.
             Permita hacer click en un marcador para mostrar un resumen de la propiedad.
-        Usar Mapbox, Google Maps o cualquier librería de mapas.
+        Usar Mapbox, Google Maps o cualquier librería de mapas. -->
 
     Formulario de Creación/Edición de Propiedades:
         Permitir crear una nueva propiedad o editar una existente.

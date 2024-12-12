@@ -1,4 +1,4 @@
-export interface IGetProperties {
+export interface IPostProperty {
   id: string;
   title: string;
   description: string;
@@ -10,26 +10,9 @@ export interface IGetProperties {
   isActive: boolean;
   price: number;
   area: number;
-  createdAt: string;
+  createdAt: Date;
   updatedAt: Date;
   owner: Owner;
-}
-
-export interface IGetPropertiesMapped {
-  title: string;
-  image: string;
-  address: string;
-  typeOfProperty: string;
-  price: string;
-  state: string;
-  available: boolean;
-  area: number;
-  dateAt: string;
-  id: string;
-  location: Location;
-  description: string;
-  owner: Owner;
-  priceWhitOutFormat: number;
 }
 
 interface Location {
@@ -42,7 +25,7 @@ interface Owner {
   contact: string;
 }
 
-enum Status {
+export enum Status {
   Rent = "rent",
   Sale = "sale",
 }
