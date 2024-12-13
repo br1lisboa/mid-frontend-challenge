@@ -1,5 +1,4 @@
 import { Image, Layout } from "../../components";
-import { INPUTS, SELECTS } from "./mocks";
 
 import { useFormCreate } from "./hooks/useFormCreate";
 import { Form, Title } from "./components";
@@ -18,13 +17,7 @@ export default function CreateView() {
           <div className="bg-white rounded-md shadow-md p-4">
             <Title isSuccess={isSuccess} />
 
-            <Form
-              control={control}
-              inputs={INPUTS}
-              selects={SELECTS}
-              isLoading={isLoading}
-              onSubmit={onSubmit}
-            />
+            <Form control={control} isLoading={isLoading} onSubmit={onSubmit} />
           </div>
         </section>
       </div>
