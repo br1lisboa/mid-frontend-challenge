@@ -7,9 +7,7 @@ export function NavBar() {
 
   const { pathname } = useLocation();
 
-  const ICON = isMobile
-    ? "../../public/red-atlas-icon.png"
-    : "../../public/red-atlas.png";
+  const ICON = isMobile ? "/red-atlas-icon.png" : "/red-atlas.png";
 
   return (
     <nav className="relative bg-white">
@@ -29,7 +27,7 @@ export function NavBar() {
 
             <div className="w-8 h-8 overflow-hidden border-2 border-gray-400 rounded-full">
               <Image
-                src="../../public/almendra.jpeg"
+                src="/almendra.jpeg"
                 alt="profile-img"
                 className="object-cover w-full h-full"
               />

@@ -10,7 +10,7 @@ export interface IGetProperty {
   isActive: boolean;
   price: number;
   area: number;
-  createdAt: Date;
+  createdAt: string;
   updatedAt: Date;
   owner: Owner;
 }
@@ -27,4 +27,17 @@ interface Owner {
 
 export interface IGetPropertyMapped {
   title: string;
+  image: string;
+  address: string;
+  typeOfProperty: string;
+  price: string;
+  state: string;
+  available: boolean;
+  area: number;
+  dateAt: string;
+  id: string;
+  location: Location;
+  description: string;
+  owner: Owner;
+  priceWhitOutFormat: number;
 }

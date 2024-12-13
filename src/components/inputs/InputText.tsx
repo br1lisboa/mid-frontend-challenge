@@ -4,7 +4,7 @@ type InputTextProps = InputHTMLAttributes<HTMLInputElement> & {
   label?: string;
   placeholder?: string;
   error?: string;
-  value: string;
+  value?: string;
   disabled?: boolean;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };

@@ -3,7 +3,7 @@ import { SelectHTMLAttributes } from "react";
 type SelectProps = SelectHTMLAttributes<HTMLSelectElement> & {
   label?: string;
   error?: string;
-  value: string;
+  value?: string;
   onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
   options: { value: string; label: string }[];
   disabled?: boolean;
