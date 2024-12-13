@@ -1,142 +1,129 @@
-HERRAMIENTAS
-Axios
-ReactQuery
-ReactHookForm
-Zod
+# Project Setup and Overview
 
-Front-End Challenge - Mid-Level 🚀
-Descripción
+This README provides a detailed guide for setting up and understanding the structure of this React project, which is built with [Bun](https://bun.sh/) as the package manager and runtime.
 
-El objetivo de este desafío es crear una aplicación para listar, gestionar y localizar propiedades inmobiliarias. Este reto evaluará tus habilidades para consumir APIs, manejo de estado, integración de herramientas externas como mapas y aplicar buenas prácticas de desarrollo.
+## Table of Contents
 
-¡Confía en tu talento y diviértete mientras lo haces! 🌟
-Requisitos Técnicos
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Running the Project](#running-the-project)
+- [Technology Stack](#technology-stack)
+- [Key Features](#key-features)
+- [Error Handling](#error-handling)
 
-    Framework: React + TypeScript.
+## Prerequisites
 
-    Estilos: Tecnología a libre elección. Puedes usar frameworks o bibliotecas como:
-        CSS puro o preprocesadores como SASS o LESS.
-        CSS-in-JS (por ejemplo, Styled Components, Emotion).
-        Frameworks de diseño (por ejemplo, Tailwind CSS, Material-UI, Chakra UI).
-        Bootstrap o cualquier sistema de diseño que prefieras.
+Ensure the following are installed on your system:
 
-    Valoramos si el diseño se adapta al estilo de Red Atlas (https://atlas.red/).
+- **Node.js** (for compatibility with React)
+- **Bun** (install via [Bun](https://bun.sh/))
+- **Git** (to clone the repository)
 
-    Diseño Responsive: Debe adaptarse correctamente a dispositivos móviles, tablets y desktops.
+## Installation
 
-    Estado: Implementar manejo de estado global (Context API, Redux Toolkit, etc.).
+1. Clone the repository:
 
-    Enrutamiento: Implementar las rutas que consideres necesarias para los requisitos del proyecto.
+   ```bash
+   git clone <https://github.com/br1lisboa/mid-frontend-challenge>
+   cd <repository-directory>
+   ```
 
-Requisitos del Proyecto
+2. Install dependencies using Bun:
+   ```bash
+   bun install
+   ```
 
-    Pantalla de Listado de Propiedades:
-        <!-- Mostrar una lista de propiedades con:
-            Título./
-            Imagen./
-            Dirección./
-            Tipo de propiedad (Apartment, House, etc.)./
-            Precio./
-            Estado (En venta, En alquiler)./
-            Disponibilidad (Activo, Inactivo).
-            Area
-            Fecha de publicación -->
+## Running the Project
 
-        Funcionalidades:
-            Búsqueda: Filtrar propiedades por titulo o dirección.
-            Filtros: Por tipo de propiedad y estado. Si decides implementar filtros avanzados (combinados), será considerado como un punto a favor 😉
-            Ordenar por precio (ascendente/descendente).
-            Paginación: Mostrar un número limitado de propiedades por página.
+To start the development server:
 
-    Vista de Detalle de Propiedad:
-        Al hacer click en una propiedad, abrir una pantalla que muestre todos los datos de la propiedad.
-        Incluir botón para regresar al listado.
+```bash
+bun dev
+```
 
-    <!-- Mapa Interactivo:
-        Incluir un mapa en la pantalla principal que:
-            Localice las propiedades en un mapa interactivo.
-            Permita hacer click en un marcador para mostrar un resumen de la propiedad.
-        Usar Mapbox, Google Maps o cualquier librería de mapas. -->
+The application will be accessible at `http://localhost:3000/`.
 
-    Formulario de Creación/Edición de Propiedades:
-        Permitir crear una nueva propiedad o editar una existente.
-        Agregar validaciones para campos obligatorios como título, dirección, precio y tipo.
-        Mostrar mensajes de error claros y accesibles.
+For production builds:
 
-Extras Opcionales ✨
+```bash
+bun build
+```
 
-    Optimización del mapa:
-        Lazy Loading de Marcadores: Cargar y mostrar solo las propiedades visibles en el viewport del mapa en lugar de precargar todos los datos.
-        Clusterización de Marcadores: Agrupar marcadores cercanos para evitar la superposición y facilitar la navegación en áreas densas.
-        Actualización Dinámica: Actualizar automáticamente los marcadores al cambiar el nivel de zoom o al desplazarse en el mapa.
-    Implementar gráficos con estadísticas (por ejemplo, número de propiedades por estado o tipo).
-    Manejo avanzado de errores (mostrar mensajes claros si la API falla).
+To preview the production build:
 
-API Fake
+```bash
+bun preview
+```
 
-La API estará disponible en:
+## Technology Stack
 
-    Base URL: https://fake-api-listings.vercel.app/api-docs/
-    Endpoints:
-        GET /properties: Lista de propiedades.
-        GET /properties/:id: Detalles de una propiedad.
-        POST /properties: Crear una propiedad.
-        PUT /properties/:id: Editar una propiedad.
-        DELETE /properties/:id: Eliminar una propiedad.
+This project uses the following libraries and tools:
 
-Nota:
+### Core Libraries
 
-Esta API es pública y compartida entre todos los candidatos. Para evitar problemas, realiza cambios solo en las propiedades que tú mismo crees. Si deseas usar tu propia API, ¡será valorado!
+- **React**: Component-based UI library.
+- **Bun**: High-performance JavaScript runtime and package manager.
 
-En caso de que la API tenga problemas, proporcionamos un archivo JSON con datos de ejemplo que puedes utilizar localmente. Este archivo incluye un conjunto básico de propiedades para ayudarte a cumplir con los requisitos del proyecto. El archivo se encuentra disponible en este repositorio bajo el nombre properties.json.
+### Data Fetching
 
-Ejemplo de propiedad:
+- **Axios**: Simplified HTTP client for API requests.
+- **React Query**: State management for server-side data.
 
-{
-"id": "123e4567-e89b-12d3-a456-426614174000",
-"title": "Moderna Casa Familiar",
-"address": "Calle Secundaria 456",
-"description": "Amplia y luminosa casa ideal para familias...",
-"location": {
-"lat": -34.6037,
-"lng": -58.3816
-},
-"images": ["https://via.placeholder.com/150"],
-"type": "house",
-"status": "sale",
-"isActive": true,
-"price": 120000,
-"area": 250,
-"createdAt": "2024-05-15T10:00:00.000Z",
-"updatedAt": "2024-11-20T15:45:00.000Z",
-"owner": {
-"name": "John Doe",
-"contact": "johndoe@example.com"
-}
-}
+### Form Handling and Validation
 
-Instrucciones de Entrega
+- **React Hook Form**: Lightweight form library.
+- **Zod**: Schema-based validation for forms and API responses.
 
-    Realiza un fork de este repositorio: Red-Atlas/mid-frontend-challenge.
+### Styling
 
-    Crea un branch con tu nombre completo en el formato: nombre-apellido.
+- **Tailwind CSS**: Utility-first CSS framework for rapid UI development.
 
-    Sube tu código al branch correspondiente.
+### Mapping
 
-    Desplegar la aplicación en un servicio gratuito como Vercel o Netlify.
+- **React Leaflet**: Interactive maps integration using Leaflet.
 
-    Incluye en el README del fork:
-        instrucciones en el README.md para instalar y ejecutar la aplicación.
-        El enlace al proyecto desplegado.
-        Un resumen de tu solución (enfoque, desafíos, decisiones técnicas).
-        Realiza un pull request a este repositorio.
+## Key Features
 
-Criterios de Evaluación
+### Error Handling
 
-    Funcionalidad: Cumplimiento de los requisitos principales.
-    Código: Limpieza, modularidad y buenas prácticas.
-    Diseño: Interfaz funcional y clara.
-    Extras Opcionales: Implementación correcta si decides incluirlos.
+- **Custom Error Handling**: Centralized error management for form validation, API responses, and application runtime.
+- **404 Handling**: Graceful fallback for non-existent routes.
+- **API Error Management**: Meaningful messages and retries for failed API calls.
 
-🚀 ¡Buena suerte!
-Si tienes dudas, no dudes en preguntar. 😊
+### Custom URL Management
+
+- Fallback mechanisms for invalid or outdated URLs.
+- Redirects and messaging for improved user experience.
+
+### Maps Integration
+
+- Interactive maps using React Leaflet with support for custom markers and dynamic data.
+
+### Responsive Design
+
+- Fully responsive layouts powered by Tailwind CSS.
+
+## Error Handling
+
+### API Errors
+
+Errors from the API are intercepted and categorized into:
+
+- **Client Errors (4xx)**: Display appropriate user feedback.
+- **Server Errors (5xx)**: Retry logic or friendly error messaging.
+
+### Form Validation Errors
+
+Using Zod with React Hook Form ensures:
+
+- Real-time validation feedback.
+- Detailed error messages for invalid inputs.
+
+### Routing Errors
+
+- A custom 404 page is rendered for unknown URLs.
+- Redirection logic guides users back to valid pages.
+
+## Conclusion
+
+This project leverages modern libraries and frameworks to provide a robust and scalable foundation for web development. For any questions or contributions, feel free to submit an issue or pull request in the repository.
