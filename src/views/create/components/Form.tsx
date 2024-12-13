@@ -1,4 +1,3 @@
-import { Control } from "react-hook-form";
 import { Button } from "../../../components";
 import { InputTextElement, SelectElement } from "../../../libs/form";
 import { INPUTS, SELECTS } from "../mocks";
@@ -7,7 +6,7 @@ type FormProps = {
   isLoading: boolean;
   onSubmit: (e?: React.BaseSyntheticEvent) => Promise<void>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  control: Control<FormData, any>;
+  control: any;
 };
 
 export function Form(props: FormProps) {
