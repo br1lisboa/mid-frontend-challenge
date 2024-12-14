@@ -24,7 +24,7 @@ The authenticated state is persisted.
   ```bash
   URL WEB
 
-  https://mid-frontend-challenge-b84o.vercel.app/
+  https://bruno-lisboa-mid-frontend-challenge-knngecdqo.vercel.app/
   ```
 
 ## Table of Contents

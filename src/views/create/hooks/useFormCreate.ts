@@ -11,8 +11,8 @@ type FormData = {
   title: string;
   description: string;
   address: string;
-  type: string;
-  status: string;
+  typeOfProperty: string;
+  state: string;
   price: string;
   ownerName: string;
   ownerAddress: string;
@@ -40,8 +40,8 @@ const schema = z.object({
   title: schemaString,
   description: schemaString,
   address: schemaString,
-  type: schemaString,
-  status: schemaString,
+  typeOfProperty: schemaString,
+  state: schemaString,
   price: schemaPrice,
   ownerName: schemaString,
   ownerAddress: schemaString,
@@ -77,8 +77,8 @@ export function useFormCreate() {
         lng: 0,
       },
       images: ["https://dummyimage.com/800x600/cccccc/000000&text=Property+1"],
-      type: data.type,
-      status: data.status as Status,
+      type: data.typeOfProperty,
+      status: data.state as Status,
       isActive: true,
       price: Number(data.price) || 0,
       area: 0,
