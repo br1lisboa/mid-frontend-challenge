@@ -10,7 +10,7 @@ export default function CreateView() {
     <Layout>
       <div className="flex h-full gap-4 w-full my-2">
         <picture className="hidden sm:block sm:flex-1 m-auto">
-          <Image src="../../../public/edificios.jpg" alt="edificios" />
+          <Image src="/edificios.jpg" alt="edificios" />
         </picture>
 
         <section className="flex-1 m-auto">
