@@ -22,6 +22,19 @@ const REQUIRED = "Campo requerido";
 const schemaString = z
   .string({ required_error: REQUIRED })
   .min(3, { message: REQUIRED });
+const schemaPrice = z
+  .string({ required_error: REQUIRED })
+  .min(1, { message: REQUIRED })
+  .refine(
+    (value) => {
+      const number = Number(value);
+      if (isNaN(number)) {
+        return false;
+      }
+      return true;
+    },
+    { message: "Solo se pueden ingresar números" }
+  );
 
 const schema = z.object({
   title: schemaString,
@@ -29,7 +42,7 @@ const schema = z.object({
   address: schemaString,
   type: schemaString,
   status: schemaString,
-  price: schemaString,
+  price: schemaPrice,
   ownerName: schemaString,
   ownerAddress: schemaString,
 });

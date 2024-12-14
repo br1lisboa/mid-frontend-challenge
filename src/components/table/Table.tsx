@@ -27,8 +27,8 @@ type TableProps = {
 export function Table({ properties, headers, handlePage }: TableProps) {
   const navigate = useNavigate();
 
-  function onNavigateTo(id: string) {
-    navigate(`/property/${id}`);
+  function handleNavigateTo({ id, url }: { id: string; url: string }) {
+    navigate(`${url}${id}`);
   }
 
   const { mutate } = useDeleteProperty();
@@ -120,7 +120,12 @@ export function Table({ properties, headers, handlePage }: TableProps) {
                           </button>
 
                           <button
-                            onClick={() => onNavigateTo(property.id)}
+                            onClick={() =>
+                              handleNavigateTo({
+                                url: "/edit/",
+                                id: property.id,
+                              })
+                            }
                             className="text-gray-500 transition-colors duration-200 dark:hover:text-yellow-500  hover:text-yellow-500 focus:outline-none"
                           >
                             <svg
@@ -137,6 +142,18 @@ export function Table({ properties, headers, handlePage }: TableProps) {
                                 d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"
                               />
                             </svg>
+                          </button>
+
+                          <button
+                            onClick={() =>
+                              handleNavigateTo({
+                                id: property.id,
+                                url: "/property/",
+                              })
+                            }
+                            className="underline text-gray-500 transition-colors duration-200 dark:hover:text-yellow-500  hover:text-yellow-500 focus:outline-none"
+                          >
+                            Ver
                           </button>
                         </div>
                       </td>
