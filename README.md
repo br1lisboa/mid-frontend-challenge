@@ -14,13 +14,10 @@ which helps in improving the performance and speed of the application.
 Custom hooks are implemented to encapsulate and reuse stateful logic across different components,
 promoting cleaner and more maintainable code.
 
-/\*
-
 - In the project setup, the following improvements can be made:
 - - Optimize the GET endpoint of a property to accept a search query, allowing filtering from the backend.
 - - This approach assumes best practices and takes advantage of the existing backend pagination, which is excellent.
 - - With more time, the architecture and design could be further refined.
-    \*/
 
 ## Table of Contents
 
