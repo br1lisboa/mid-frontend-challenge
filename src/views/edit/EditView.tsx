@@ -13,8 +13,6 @@ export default function EditView() {
     id: params.id || "",
   });
 
-  console.log(data);
-
   return (
     <Layout className="bg-white" isLoading={isLoading || isLoadingEdit}>
       <div className="flex h-full gap-4 w-full my-2">
