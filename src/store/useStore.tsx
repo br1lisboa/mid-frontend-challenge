@@ -1,30 +1,24 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
-type Option = {
-  value: string;
-  label: string;
+type StoreState = {
+  isAuthenticated: boolean;
+  toggleAuth: () => void;
 };
 
-type StoreState = {
-  types: Option[];
-  statuses: Option[];
+const INITIAL_STATE = {
+  isAuthenticated: false,
 };
 
 export const useStoreApp = create<StoreState>()(
   persist(
-    () => ({
-      types: [
-        { value: "house", label: "Casa" },
-        { value: "apartment", label: "Departamento" },
-      ],
-      statuses: [
-        { value: "sale", label: "Venta" },
-        { value: "rent", label: "Renta" },
-      ],
+    (set) => ({
+      ...INITIAL_STATE,
+      toggleAuth: () =>
+        set((state) => ({ isAuthenticated: !state.isAuthenticated })),
     }),
     {
-      name: "property-store",
+      name: "isAuth",
     }
   )
 );

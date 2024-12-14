@@ -14,6 +14,7 @@ export function Button({ children, onClick, disabled, style }: ButtonProps) {
         disabled && "opacity-50 cursor-not-allowed"
       }}`}
       style={style}
+      onClick={onClick}
     >
       {children}
     </button>

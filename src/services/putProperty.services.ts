@@ -4,11 +4,10 @@ import { IPostProperty } from "../interfaces";
 
 export async function putProperty(data: Partial<IPostProperty>, id: string) {
   try {
-    await axiosInstance.put(`/properties/${id}`, {
+    await axiosInstance.put(`/properties/${id}`, data, {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(data),
     });
 
     return {

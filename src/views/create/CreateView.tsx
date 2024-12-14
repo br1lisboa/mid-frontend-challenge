@@ -1,7 +1,7 @@
-import { Image, Layout } from "../../components";
+import { Form, Image, Layout } from "../../components";
 
 import { useFormCreate } from "./hooks/useFormCreate";
-import { Form, Title } from "./components";
+import { Title } from "./components";
 
 export default function CreateView() {
   const { control, isLoading, onSubmit, isSuccess } = useFormCreate();
