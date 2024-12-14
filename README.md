@@ -25,7 +25,6 @@ The authenticated state is persisted.
   URL WEB
 
   https://mid-frontend-challenge-b84o.vercel.app/
-
   ```
 
 ## Table of Contents
