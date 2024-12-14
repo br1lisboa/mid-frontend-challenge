@@ -19,6 +19,10 @@ promoting cleaner and more maintainable code.
 - - This approach assumes best practices and takes advantage of the existing backend pagination, which is excellent.
 - - With more time, the architecture and design could be further refined.
 
+  ```bash
+  URL WEB <https://mid-frontend-challenge-b84o.vercel.app/>
+  ```
+
 ## Table of Contents
 
 - [Prerequisites](#prerequisites)
