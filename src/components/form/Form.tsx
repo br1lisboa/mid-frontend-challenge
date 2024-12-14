@@ -1,6 +1,6 @@
-import { Button } from "../../../components";
-import { InputTextElement, SelectElement } from "../../../libs/form";
-import { INPUTS, SELECTS } from "../mocks";
+import { InputTextElement, SelectElement } from "../../libs/form";
+import { Button } from "../button/Button";
+import { INPUTS, SELECTS } from "./mocks";
 
 type FormProps = {
   isLoading: boolean;

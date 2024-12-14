@@ -1,5 +1,3 @@
-TODO > number validate in form
-
 # Project Setup and Overview
 
 This README provides a detailed guide for setting up and understanding the structure of this React project, which is built with [Bun](https://bun.sh/) as the package manager and runtime.
@@ -14,13 +12,20 @@ which helps in improving the performance and speed of the application.
 Custom hooks are implemented to encapsulate and reuse stateful logic across different components,
 promoting cleaner and more maintainable code.
 
+This code uses Zustand for global state management with data persistence.
+It emulates user login to protect routes such as creation and editing.
+The authenticated state is persisted.
+
 - In the project setup, the following improvements can be made:
 - - Optimize the GET endpoint of a property to accept a search query, allowing filtering from the backend.
 - - This approach assumes best practices and takes advantage of the existing backend pagination, which is excellent.
 - - With more time, the architecture and design could be further refined.
 
   ```bash
-  URL WEB <https://mid-frontend-challenge-b84o.vercel.app/>
+  URL WEB
+
+  https://mid-frontend-challenge-b84o.vercel.app/
+
   ```
 
 ## Table of Contents

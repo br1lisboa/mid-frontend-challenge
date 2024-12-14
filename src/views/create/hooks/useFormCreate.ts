@@ -76,7 +76,7 @@ export function useFormCreate() {
         lat: 0,
         lng: 0,
       },
-      images: ["string"],
+      images: ["https://dummyimage.com/800x600/cccccc/000000&text=Property+1"],
       type: data.type,
       status: data.status as Status,
       isActive: true,

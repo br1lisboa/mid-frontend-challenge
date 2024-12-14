@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/properties": {
-        target: "https://fake-api-listings.vercel.app",
+        target: process.env.VITE_BASE_URL,
         changeOrigin: true,
       },
     },
