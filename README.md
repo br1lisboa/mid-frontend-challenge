@@ -6,6 +6,14 @@ This README provides a detailed guide for setting up and understanding the struc
 
 The project did not face major technical difficulties. Zustand was used to emulate global storage with data persistence, React Query for data caching, Axios for API calls, React Hook Form for complex forms, and Zod for their validations. Tailwind CSS was used for styling, and React Leaflet for maps. Development followed DRY and SOLID principles, and some reusable components were created using the compound component design pattern with extensible styles and control props.
 
+This app utilizes lazy loading and custom hooks to optimize performance and enhance reusability.
+
+Lazy loading is used to defer the loading of non-critical resources at the initial page load time,
+which helps in improving the performance and speed of the application.
+
+Custom hooks are implemented to encapsulate and reuse stateful logic across different components,
+promoting cleaner and more maintainable code.
+
 /\*
 
 - In the project setup, the following improvements can be made:
