@@ -29,7 +29,8 @@ const schemaPrice = z
   .min(1, { message: REQUIRED })
   .refine(
     (value) => {
-      const number = Number(value);
+      const refine = value.replace(/[$.]/g, "");
+      const number = Number(refine);
       if (isNaN(number)) {
         return false;
       }
@@ -69,7 +70,7 @@ export default function EditView() {
 
   const { data, isLoading } = useGetProperty({ id: params.id || "" });
 
-  const { mutate } = usePutProperty({});
+  const { mutate, isLoading: isLoadingEdit } = usePutProperty({});
 
   const { control, handleSubmit, reset } = useForm<FormData>({
     defaultValues: getDefaultValue(data),
@@ -101,7 +102,7 @@ export default function EditView() {
   }
 
   return (
-    <Layout className="bg-white" isLoading={isLoading}>
+    <Layout className="bg-white" isLoading={isLoading || isLoadingEdit}>
       <div className="flex h-full gap-4 w-full my-2">
         <picture className="hidden sm:block sm:flex-1 m-auto">
           <Image

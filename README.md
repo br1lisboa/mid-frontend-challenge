@@ -1,4 +1,4 @@
-Pasar a ENV URL
+TODO > number validate in form
 
 # Project Setup and Overview
 
@@ -6,10 +6,9 @@ This README provides a detailed guide for setting up and understanding the struc
 
 The project did not face major technical difficulties. Zustand was used to emulate global storage with data persistence, React Query for data caching, Axios for API calls, React Hook Form for complex forms, and Zod for their validations. Tailwind CSS was used for styling, and React Leaflet for maps. Development followed DRY and SOLID principles, and some reusable components were created using the compound component design pattern with extensible styles and control props.
 
-/\*\*
+/\*
 
 - In the project setup, the following improvements can be made:
--
 - - Optimize the GET endpoint of a property to accept a search query, allowing filtering from the backend.
 - - This approach assumes best practices and takes advantage of the existing backend pagination, which is excellent.
 - - With more time, the architecture and design could be further refined.
