@@ -1,10 +1,15 @@
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { IGetPropertiesMapped } from "../../../interfaces";
-import { LatLngExpression } from "leaflet";
+import { Icon, LatLngExpression } from "leaflet";
 
 type Props = {
   properties: IGetPropertiesMapped[] | undefined;
 };
+
+const customIcon = new Icon({
+  iconUrl: "/red-atlas-icon.png",
+  iconSize: [32, 32], // Ajusta el tamaño del icono según sea necesario
+});
 
 export function MapProperties({ properties }: Props) {
   const center: LatLngExpression =
@@ -30,6 +35,7 @@ export function MapProperties({ properties }: Props) {
               <Marker
                 key={property.id}
                 position={[property.location.lat, property.location.lng]}
+                icon={customIcon}
               >
                 <Popup>
                   <div>

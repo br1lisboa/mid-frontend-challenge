@@ -36,6 +36,8 @@ export default function HomeView() {
     [page]
   );
 
+  const hasData = filteredData && filteredData.length > 0;
+
   return (
     <Layout isLoading={isLoading} className="bg-white">
       <div className="flex  sm:flex-row gap-4 h-full relative">
@@ -52,13 +54,27 @@ export default function HomeView() {
             types={types}
           />
         </div>
-        <div className="w-1/3 hidden sm:flex flex-col justify-center gap-5">
-          <MapProperties properties={filteredData} />
-        </div>
 
-        <div className="sm:w-2/3 w-full mt-20 sm:mt-10">
-          <TableProperties properties={filteredData} handlePage={handlePage} />
-        </div>
+        {!hasData && !isLoading && (
+          <div className="w-full h-96 flex items-center justify-center">
+            <h1>No encontramos propiedades con tus búsquedas y filtros.</h1>
+          </div>
+        )}
+
+        {hasData && (
+          <>
+            <div className="w-1/3 hidden sm:flex flex-col justify-center gap-5">
+              <MapProperties properties={filteredData} />
+            </div>
+
+            <div className="sm:w-2/3 w-full mt-20 sm:mt-10">
+              <TableProperties
+                properties={filteredData}
+                handlePage={handlePage}
+              />
+            </div>
+          </>
+        )}
       </div>
     </Layout>
   );
