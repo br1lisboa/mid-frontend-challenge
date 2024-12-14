@@ -10,8 +10,8 @@ type FormData = {
   title: string;
   description: string;
   address: string;
-  type: string;
-  status: string;
+  typeOfProperty: string;
+  state: string;
   price: string;
   ownerName: string;
   ownerAddress: string;
@@ -39,8 +39,8 @@ const schema = z.object({
   title: schemaString,
   description: schemaString,
   address: schemaString,
-  type: schemaString,
-  status: schemaString,
+  typeOfProperty: schemaString,
+  state: schemaString,
   price: schemaPrice,
   ownerName: schemaString,
   ownerAddress: schemaString,
@@ -51,8 +51,8 @@ function getDefaultValue(data: IGetPropertyMapped | undefined): FormData {
     title: data?.title || "",
     description: data?.description || "",
     address: data?.address || "",
-    type: data?.typeOfProperty || "",
-    status: data?.state || "",
+    typeOfProperty: data?.typeOfProperty || "",
+    state: data?.state || "",
     price: data?.price || "",
     ownerName: data?.owner?.name || "",
     ownerAddress: data?.owner?.contact || "",
@@ -91,8 +91,8 @@ export function useFormEdit({ data, id }: useFormEditProp) {
       title: formData.title,
       description: formData.description,
       address: formData.address,
-      type: formData.type,
-      status: formData.status as Status,
+      type: formData.typeOfProperty,
+      status: formData.state as Status,
       price: normalizePrice(formData.price),
       owner: {
         name: formData.ownerName,

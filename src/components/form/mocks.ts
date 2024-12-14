@@ -33,7 +33,7 @@ export const INPUTS = [
 
 export const SELECTS = [
   {
-    name: "type",
+    name: "typeOfProperty",
     label: "Tipo de propiedad",
     options: [
       {
@@ -41,21 +41,21 @@ export const SELECTS = [
         label: "Selecciona",
       },
       {
-        value: "apartment",
+        value: "Apartment",
         label: "Departamento",
       },
       {
-        value: "house",
+        value: "House",
         label: "Casa",
       },
       {
-        value: "land",
+        value: "Land",
         label: "Terreno",
       },
     ],
   },
   {
-    name: "status",
+    name: "state",
     label: "Destino de propiedad",
     options: [
       {
@@ -63,11 +63,11 @@ export const SELECTS = [
         label: "Selecciona",
       },
       {
-        value: "sale",
+        value: "Sale",
         label: "Venta",
       },
       {
-        value: "rent",
+        value: "Rent",
         label: "Renta",
       },
     ],
